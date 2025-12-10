@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--criacao do cabecalho-->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon" aria-hidden="true">🐾</span>
+                <span class="logo-text">Patinhas Felizes</span>
+            </a>
+
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre/adote.html" class="active">Adote</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="#" class="btn-donate">Doe Agora</a>
+
+            <button class="mobile-nav-toggle" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- sessao inicial-->
+    <section class="hero hero-home">
+        <div class="hero-inner">
+            <h1>Encontre seu Melhor Amigo</h1>
+            <p>
+                Ajude a mudar a vida de um animal. Cada adoção é uma história
+                de amor que começa aqui.
+            </p>
+
+            <div class="hero-actions">
+                <a href="sobre/adote.html" class="btn-primary">
+                    <i class="fa-regular fa-heart"></i>
+                    Ver Animais
+                </a>
+
+                <a href="#" class="btn-outline">
+                    Como Ajudar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- estatisticas -->
+    <section class="stats">
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <i class="fa-regular fa-heart stat-icon" style="color:#ff6b6b;"></i>
+                    <h2 class="stat-number">350+</h2>
+                    <p class="stat-label">Animais Adotados</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-people-group stat-icon" style="color:#f39c12;"></i>
+                    <h2 class="stat-number">120+</h2>
+                    <p class="stat-label">Famílias Felizes</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-paw stat-icon" style="color:#1abc9c;"></i>
+                    <h2 class="stat-number">45</h2>
+                    <p class="stat-label">Aguardando Adoção</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- sessao inicial dos animais -->
+    <section class="featured">
+        <div class="container">
+
+            <header class="featured-header">
+                <h2>Conheça Nossos Amigos</h2>
+                <p>Eles estão esperando por você!</p>
+            </header>
+
+            <div class="featured-grid">
+
+                <!-- Card 1 -->
+                <article class="pet-card">
+                    <div class="pet-img">
+                        <img src="img/cachorro.jpg" alt="Cadelinha Luna feliz">
+                    </div>
+                    <div class="pet-body">
+                        <h3 class="pet-name">Luna</h3>
+                        <p class="pet-breed">Cachorro</p>
+                        <p class="pet-age">2 anos</p>
+                    </div>
+                    <div class="pet-footer">
+                        <button class="btn-adopt">
+                            <i class="fa-regular fa-heart"></i>
+                            Quero Adotar
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="pet-card">
+                    <div class="pet-img">
+                        <img src="img/gato.jpg" alt="Gata Mel apoiada na pata">
+                    </div>
+                    <div class="pet-body">
+                        <h3 class="pet-name">Mel</h3>
+                        <p class="pet-breed">Gato</p>
+                        <p class="pet-age">1 ano</p>
+                    </div>
+                    <div class="pet-footer">
+                        <button class="btn-adopt">
+                            <i class="fa-regular fa-heart"></i>
+                            Quero Adotar
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="pet-card">
+                    <div class="pet-img">
+                        <img src="img/cachorro2.jpg" alt="Cão Thor sorrindo na praia">
+                    </div>
+                    <div class="pet-body">
+                        <h3 class="pet-name">Thor</h3>
+                        <p class="pet-breed">Cachorro</p>
+                        <p class="pet-age">3 anos</p>
+                    </div>
+                    <div class="pet-footer">
+                        <button class="btn-adopt">
+                            <i class="fa-regular fa-heart"></i>
+                            Quero Adotar
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="featured-btn">
+                <a href="sobre/adote.html" class="btn-outline btn-all">
+                    Ver Todos os Animais
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- doacao-->
+    <section class="cta-donate">
+        <div class="container cta-inner">
+
+            <h2>Faça a Diferença Hoje</h2>
+            <p>
+                Sua doação ajuda a cuidar de animais abandonados, fornecendo
+                alimentação, abrigo e cuidados médicos.
+            </p>
+
+            <div class="cta-actions">
+                <a href="#" class="btn-donate">
+                    <i class="fa-regular fa-heart"></i>
+                    Fazer Doação
+                </a>
+
+                <a href="#" class="btn-cta-outline">
+                    <i class="fa-solid fa-phone"></i>
+                    Entre em Contato
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--footer + colunas-->
+    <footer class="site-footer">
+        <div class="container footer-top">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon" aria-hidden="true">🐾</span>
+                    <span class="logo-text">Patinhas Felizes</span>
+                </a>
+                <p>Conectando animais abandonados a famílias amorosas desde 2015.</p>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Como Adotar</a></li>
+                    <li><a href="#">Voluntariado</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="mailto:contato@patinhasfelizes.org">contato@patinhasfelizes.org</a></li>
+                    <li><a href="tel:+5511999999999">(11) 9999-9999</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="container footer-bottom">
+            <p>&copy; 2025 Patinhas Felizes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

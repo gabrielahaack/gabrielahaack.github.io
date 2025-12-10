@@ -1,0 +1,886 @@
+/*reset do css*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo Global */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2b2b2b;
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+/* HEADER */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+}
+
+.logo-icon {
+    font-size: 1.35rem;
+    color: #ff6b6b;
+    /* rosa principal */
+}
+
+/* - Navegação - */
+.main-nav ul {
+    display: flex;
+    gap: 2.5rem;
+    font-weight: 600;
+}
+
+.main-nav a {
+    color: #6f6f6f;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+    color: #ff6b6b;
+}
+
+
+.btn-donate {
+    background: #ff6b6b;
+    color: #ffffff;
+    padding: .65rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background .2s ease;
+}
+
+.btn-donate:hover,
+.btn-donate:focus {
+    background: #ff5050;
+}
+
+/* Botão menu mobile*/
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #2b2b2b;
+}
+
+
+/*--------------------------------------------------------------------*/
+/* HERO SECTION (adote) */
+.hero {
+    background: linear-gradient(135deg,
+            rgba(255, 235, 238, 0.9) 0%,
+            rgba(255, 243, 230, 0.9) 35%,
+            rgba(232, 250, 236, 0.9) 100%);
+    text-align: center;
+    padding: 5rem 1rem 4rem;
+}
+
+.hero-inner {
+    width: min(90%, 1000px);
+    margin-inline: auto;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw + 0.5rem, 3.5rem);
+    color: #2b2b2b;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: #6f6f6f;
+    max-width: 700px;
+    margin-inline: auto;
+    line-height: 1.6;
+}
+
+/*--------------------------------------------------------------------*/
+/* Hero section (pagina inicial) */
+
+.hero-home {
+    background: linear-gradient(135deg,
+            rgba(255, 235, 238, 0.9) 0%,
+            rgba(255, 243, 230, 0.9) 35%,
+            rgba(232, 250, 236, 0.9) 100%);
+    text-align: center;
+    padding: 7rem 1rem 6rem;
+    /*espacamento dos botoes*/
+}
+
+.hero-home .hero-inner {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+}
+
+.hero-home h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw + 1rem, 5rem);
+    line-height: 1.1;
+    color: #2b2b2b;
+    margin-bottom: 1.6rem;
+}
+
+.hero-home p {
+    font-size: 1.25rem;
+    color: #6f6f6f;
+    max-width: 800px;
+    margin-inline: auto;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+/* ---------- Botões ---------- */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* botão principal */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .9rem 2.4rem;
+    background: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.btn-primary:hover {
+    background: #ff5050;
+}
+
+/* botão secundário */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .9rem 2.4rem;
+    background: #fffefc;
+    border: 1px solid #d9d1b5;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease;
+}
+
+.btn-outline:hover {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+/* icon size align */
+.btn-primary i,
+.btn-outline i {
+    font-size: 1.1rem;
+}
+
+/*--------------------------------------------------------------------*/
+
+/* BARRA DE PESQUISA + FILTROS */
+.filter-bar {
+    border-bottom: none;
+    padding: 2rem 0 2.3rem;
+    background: #ffffff;
+}
+
+.filter-form {
+    /*quebra a medida que filtra*/
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/*Campo de busca*/
+.search-input {
+    flex: 1 1 350px;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #fdfaf3;
+    border: 1px solid #d9d1b5;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+}
+
+.search-input i {
+    color: #6f6f6f;
+    font-size: 1rem;
+}
+
+.search-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    color: #2b2b2b;
+}
+
+/* Chips de filtro*/
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .55rem 1.2rem;
+    background: #fdfaf3;
+    border: 1px solid #d9d1b5;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.chip i {
+    margin-top: -2px;
+}
+
+.chip:hover,
+.chip.active {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+/*---------------------------------------------------------------------*/
+
+/* SEÇÃO DE ESTATÍSTICAS */
+.stats {
+    background: #fdfaf3;
+    padding: 4.5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    text-align: center;
+    padding: 3rem 1.5rem 2.7rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ícone */
+.stat-icon {
+    font-size: 2.6rem;
+    margin-bottom: 1.4rem;
+}
+
+/* número */
+.stat-number {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    margin-bottom: .7rem;
+}
+
+/* legenda */
+.stat-label {
+    font-size: 1rem;
+    color: #6f6f6f;
+}
+
+/*-------------------------------------------------------------------*/
+
+/* secao inicial (pets)*/
+.featured {
+    background: #fdfaf3;
+    padding: 5rem 0 4rem;
+}
+
+.featured-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.featured-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+    color: #2b2b2b;
+    margin-bottom: .7rem;
+}
+
+.featured-header p {
+    font-size: 1.1rem;
+    color: #6f6f6f;
+}
+
+.featured-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.featured-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-all {
+    display: inline-block;
+    padding: .75rem 2.2rem;
+    background: #fffefc;
+    border: 1px solid #d9d1b5;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    transition: background .18s ease, color .18s ease;
+}
+
+.btn-all:hover {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+
+/* --------- Ajuste leve para os cards dentro desse bloco --------- */
+.pet-card .pet-body {
+    padding: 1.1rem 1.3rem .6rem;
+}
+
+.pet-card .pet-footer {
+    padding: .8rem 1.3rem 1.2rem;
+    border-top: none;
+}
+
+/*--------------------------------------------------------------------*/
+
+/* contagem */
+.results-count {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #2b2b2b;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* exibicao dos animais por card */
+.pet-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow .18s ease;
+}
+
+.pet-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* imagem */
+.pet-img {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.pet-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: .7rem;
+    left: .7rem;
+    background: #ff6b6b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: .25rem .55rem;
+    border-radius: 12px;
+}
+
+.badge+.badge {
+    left: auto;
+    right: .7rem;
+}
+
+
+.badge-size {
+    background: #d9d1b5;
+    color: #2b2b2b;
+}
+
+.badge-cat {
+    background: #ff6bd3;
+}
+
+/* Botão favorito (canto superior direito) */
+.btn-fav {
+    position: absolute;
+    bottom: .7rem;
+    right: .7rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #d9d1b5;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.btn-fav:hover {
+    background: #ff6b6b;
+    color: #ffffff;
+}
+
+/*Corpo */
+.pet-body {
+    padding: 1.2rem 1.4rem .8rem;
+    flex-grow: 1;
+}
+
+.pet-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: .2rem;
+    color: #2b2b2b;
+}
+
+.pet-breed {
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    margin-bottom: .9rem;
+}
+
+.pet-info {
+    font-size: 0.9rem;
+    color: #2b2b2b;
+    line-height: 1.6;
+    margin-bottom: .8rem;
+}
+
+.pet-info li {
+    display: flex;
+    align-items: center;
+}
+
+.pet-info .location i {
+    margin-right: .3rem;
+    color: #ff6b6b;
+}
+
+/*Tags */
+.pet-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.tag {
+    background: #faf5e9;
+    border: 1px solid #d9d1b5;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: .2rem .6rem;
+    color: #2b2b2b;
+}
+
+/* ---------- Rodapé do card ---------- */
+.pet-footer {
+    padding: .9rem 1.4rem 1.3rem;
+}
+
+.btn-adopt {
+    width: 100%;
+    background: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    transition: background .18s ease;
+}
+
+.btn-adopt:hover {
+    background: #ff5050;
+}
+
+/*---------------------------------------------------------------------*/
+/* =============================
+   BOTÃO – VER TODOS
+==============================*/
+.see-all {
+    text-align: center;
+    padding: 2.5rem 0 3rem;
+}
+
+.btn-all {
+    display: inline-block;
+    padding: .75rem 2.2rem;
+    background: #fffefc;
+    border: 1px solid #d9d1b5;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    transition: background .18s ease, color .18s ease;
+}
+
+.btn-all:hover {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+/* =============================
+   CTA – DOAÇÃO
+==============================*/
+.cta-donate {
+    background: linear-gradient(135deg, #e94e8f 0%, #f18d6c 50%, #f0ad55 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem 4.5rem;
+}
+
+.cta-inner {
+    width: min(90%, 900px);
+    margin-inline: auto;
+}
+
+.cta-donate h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4vw + 1rem, 3.2rem);
+    line-height: 1.2;
+    margin-bottom: 1.3rem;
+}
+
+.cta-donate p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2.8rem;
+    color: #fceff0;
+}
+
+/* ---------- Botões ---------- */
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Botão cheio (laranja) */
+.btn-donate {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .9rem 2.4rem;
+    background: #e89d38;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.btn-donate:hover {
+    background: #d7891a;
+}
+
+/* Botão contornado (branco) */
+.btn-cta-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .9rem 2.4rem;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease;
+}
+
+.btn-cta-outline:hover {
+    background: #ffffff;
+    color: #e94e8f;
+}
+
+/* Ajustar tamanho dos ícones */
+.btn-donate i,
+.btn-cta-outline i {
+    font-size: 1.05rem;
+}
+
+.icon-search,
+.icon-filter {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.icon-heart,
+.icon-location {
+    width: 8px;
+    height: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+
+/* RODAPE */
+.site-footer {
+    background: #ffffff;
+    color: #6f6f6f;
+    padding-block: 3.5rem 2rem;
+    font-size: 0.95rem;
+}
+
+.footer-top {
+    display: grid;
+    gap: 2rem 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-bottom: 2.5rem;
+}
+
+.footer-brand .logo {
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+}
+
+.footer-brand p {
+    line-height: 1.5;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: .8rem;
+}
+
+.footer-links li+li,
+.footer-contact li+li {
+    margin-top: .45rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #ff6b6b;
+}
+
+/* divisor */
+.site-footer hr {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6f6f6f;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+/* Responsividade mobile */
+@media (max-width: 800px) {
+
+    .main-nav,
+    .btn-donate {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .main-nav.open {
+        position: absolute;
+        top: 72px;
+        right: 0;
+        width: 70vw;
+        max-width: 260px;
+        background: #ffffff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        padding: 1.5rem;
+        display: block;
+    }
+
+    .main-nav.open ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 3.5rem 1rem 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .filter-bar {
+        padding: 1.5rem 0 2rem;
+    }
+
+    .chip {
+        flex: 0 0 auto;
+    }
+
+    .hero-home {
+        padding: 5rem 1rem 4.5rem;
+    }
+
+    .hero-home p {
+        font-size: 1.05rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .see-all {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .cta-donate {
+        padding: 4rem 1rem 3.5rem;
+    }
+
+    .btn-donate,
+    .btn-cta-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        gap: 1rem;
+    }
+
+    .pet-body {
+        padding: 1rem 1.1rem .6rem;
+    }
+
+    .pet-footer {
+        padding: .8rem 1.1rem 1.1rem;
+    }
+
+    .stat-card {
+        padding: 2.5rem 1rem 2.2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .featured {
+        padding: 4rem 0 3rem;
+    }
+
+    .featured-header p {
+        font-size: 1rem;
+    }
+
+}

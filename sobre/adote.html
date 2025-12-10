@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de adoção</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--criacao do cabecalho-->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon" aria-hidden="true">🐾</span>
+                <span class="logo-text">Patinhas Felizes</span>
+            </a>
+
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="adote.html" class="active">Adote</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="doacao.html" class="btn-donate">Doe Agora</a>
+
+            <button class="mobile-nav-toggle" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- sessao do aviso -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Animais Disponíveis para Adoção</h1>
+            <p>
+                Encontre seu novo melhor amigo! Todos os nossos animais estão
+                vacinados e prontos para um lar amoroso.
+            </p>
+        </div>
+    </section>
+
+    <!-- barra de pesquisa + filtragem-->
+    <section class="filter-bar">
+        <div class="container">
+            <form class="filter-form" autocomplete="off">
+
+                <!-- Campo de busca -->
+                <label class="search-input">
+                    <img src="icons/pesquisa.png" alt="Buscar" class="icon-search" />
+
+                    <input type="search" id="searchInput" placeholder="Buscar por nome, tipo ou raça..." />
+                </label>
+
+                <!-- Chip de filtro -->
+                <button type="button" class="chip chip-filter">
+                    <img src="icons/filter.png" class="icon-filter" />
+                    Filtros
+                </button>
+
+                <button type="button" class="chip" data-type="dog">Cachorros</button>
+                <button type="button" class="chip" data-type="cat">Gatos</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!--sessao dos resultados-->
+    <section class="results">
+        <div class="container">
+            <p class="results-count">
+                <span id="resultsTotal">0</span> animais encontrados
+            </p>
+
+            <!-- grid com JS -->
+            <div class="card-grid" id="cardGrid"></div>
+        </div>
+    </section>
+
+
+    <!--footer + colunas-->
+    <footer class="site-footer">
+        <div class="container footer-top">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon" aria-hidden="true">🐾</span>
+                    <span class="logo-text">Patinhas Felizes</span>
+                </a>
+                <p>Conectando animais abandonados a famílias amorosas desde 2015.</p>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Como Adotar</a></li>
+                    <li><a href="#">Voluntariado</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="mailto:contato@patinhasfelizes.org">contato@patinhasfelizes.org</a></li>
+                    <li><a href="tel:+5511999999999">(11) 9999-9999</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="container footer-bottom">
+            <p>&copy; 2025 Patinhas Felizes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
