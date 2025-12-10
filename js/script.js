@@ -10,12 +10,12 @@ let searchTerm = '';
 const pets = [
     {
         id: 1,
-        name: 'Luna',
+        name: 'Lara',
         species: 'dog',
-        size: 'Médio',
+        size: 'Grande',
         age: '2 anos',
         sex: 'Fêmea',
-        breed: 'Vira-lata',
+        breed: 'Golden retriever',
         city: 'São Paulo, SP',
         tags: ['Dócil', 'Brincalhona'],
         img: '../img/cachorro.jpg'
@@ -27,7 +27,7 @@ const pets = [
         size: 'Pequeno',
         age: '1 ano',
         sex: 'Fêmea',
-        breed: 'Siamês',
+        breed: 'Bombaim',
         city: 'São Paulo, SP',
         tags: ['Carinhosa', 'Calma'],
         img: '../img/gato.jpg'
@@ -39,10 +39,10 @@ const pets = [
         size: 'Grande',
         age: '3 anos',
         sex: 'Macho',
-        breed: 'Labrador',
+        breed: 'Pastor Alemão ',
         city: 'Campinas, SP',
         tags: ['Protetor', 'Leal'],
-        img: '../img/cachorro2.jpg'
+        img: '../img/cachorro3.jpg'
     },
     {
         id: 4,
@@ -54,7 +54,7 @@ const pets = [
         breed: 'Poodle',
         city: 'Guarulhos, SP',
         tags: ['Brincalhona'],
-        img: '../img/cachorro3.jpg'
+        img: '../img/cachorro2.jpg'
     },
     {
         id: 5,
@@ -72,13 +72,62 @@ const pets = [
         id: 6,
         name: 'Zeca',
         species: 'dog',
-        size: 'Médio',
+        size: 'Grande ',
         age: '5 anos',
         sex: 'Macho',
-        breed: 'Beagle',
+        breed: 'Rottweiler',
         city: 'Sorocaba, SP',
-        tags: ['Dócil'],
+        tags: ['Protetor'],
         img: '../img/cachorro4.jpg'
+    },
+    {
+        id: 7,
+        name: 'Lilica',
+        species: 'dog',
+        size: 'Pequeno ',
+        age: ' 7 meses ',
+        sex: 'femea ',
+        breed: 'beaglee',
+        city: 'Sorocaba, SP',
+        tags: ['Brincalhão'],
+        img: '../img/cachorro5.jpg'
+    },
+    {
+        id: 8,
+        name: 'Frederico',
+        species: 'dog',
+        size: 'Pequeno ',
+        age: ' 4 meses ',
+        sex: 'macho ',
+        breed: 'dachshund',
+        city: 'Sorocaba, SP',
+        tags: ['Simpatico','Brincalhão'],
+        img: '../img/cachorro7.jpg'
+    }
+    ,
+    {
+        id: 9,
+        name: 'Athena',
+        species: 'cat',
+        size: 'Pequeno',
+        age: ' 1 ano ',
+        sex: 'femea ',
+        breed: 'Persa ',
+        city: 'Sorocaba, SP',
+        tags: ['Tranquila '],
+        img: '../img/gato3.jpg'
+    },
+    {
+        id: 10,
+        name: 'Princy',
+        species: 'cat',
+        size: 'Pequeno',
+        age: ' 2 meses  ',
+        sex: 'macho ',
+        breed: 'Gato malhado ',
+        city: 'Sorocaba, SP',
+        tags: ['Calmo'],
+        img: '../img/gato4.jpg'
     }
 ];
 

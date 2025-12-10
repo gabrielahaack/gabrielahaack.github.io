@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐾 Formulário de Adoção</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1, h2 {
+            color: #444;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: 600;
+            margin-top: 15px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #ff6b6b;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255,107,107,0.3);
+        }
+        textarea { resize: vertical; }
+        .submit-btn {
+            width: 100%;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 18px;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover { background-color: #ff5252; }
+        .terms {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .terms input { width: auto; margin-right: 8px; }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #444;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover { color: #ff6b6b; }
+        .error-message {
+            color: red;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 20px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Formulário de Adoção 🐾</h1>
+    <form id="adocaoForm">
+        <!-- Dados Pessoais -->
+        <h2>Dados Pessoais</h2>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" required>
+        <p id="erroNome" class="error-message"></p>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+        <p id="erroEmail" class="error-message"></p>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" required placeholder="(11) 98765-4321">
+        <p id="erroTel" class="error-message"></p>
+
+        <!-- Endereço -->
+        <h2>Endereço</h2>
+        <label for="endereco">Endereço Completo</label>
+        <input type="text" id="endereco" required>
+
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" required>
+
+        <label for="estado">Estado</label>
+        <select id="estado" required>
+            <option value="">Selecione</option>
+            <option>SP</option><option>RJ</option><option>MG</option><option>ES</option>
+            <option>RS</option><option>SC</option><option>PR</option><option>BA</option>
+            <option>GO</option><option>MT</option><option>MS</option><option>PE</option>
+            <option>CE</option><option>PA</option><option>Outros</option>
+        </select>
+
+        <!-- Sobre a residência -->
+        <h2>Sobre sua Residência</h2>
+        <label>Tipo de Moradia</label>
+        <select required>
+            <option value="">Selecione</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Chácara / Sítio</option>
+            <option>Outros</option>
+        </select>
+
+        <label>A residência é...</label>
+        <select required>
+            <option value="">Selecione</option>
+            <option>Própria</option>
+            <option>Alugada</option>
+        </select>
+
+        <label for="condominio">Se for apartamento, o condomínio permite animais?</label>
+        <select id="condominio">
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+            <option>Não se aplica</option>
+        </select>
+
+        <!-- Experiência com animais -->
+        <h2>Experiência com Animais</h2>
+        <label for="jaTeve">Você já teve animais antes?</label>
+        <select id="jaTeve" required>
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+        </select>
+
+        <label for="petsAtuais">Possui outros animais atualmente? Se sim, quais?</label>
+        <textarea id="petsAtuais" rows="3"></textarea>
+
+        <label for="motivo">Por que deseja adotar um animal?</label>
+        <textarea id="motivo" rows="4" required></textarea>
+
+        <!-- Animal -->
+        <h2>Animal que deseja adotar</h2>
+        <label for="animal">Selecione o animal</label>
+        <select id="animal" required>
+            <option value="">Selecione</option>
+            <option>Luna (Cachorra - 2 anos)</option>
+            <option>Mel (Gata - 1 ano)</option>
+            <option>Thor (Cachorro - 3 anos)</option>
+            <option>Outro (escrever abaixo)</option>
+        </select>
+
+        <label for="outroAnimal">Caso tenha escolhido "Outro", informe o nome:</label>
+        <input type="text" id="outroAnimal">
+
+        <!-- Termos -->
+        <div class="terms">
+            <label>
+                <input type="checkbox" required>
+                Confirmo que forneci informações verdadeiras e estou ciente da responsabilidade de cuidar do animal adotado.
+            </label>
+        </div>
+
+        <!-- Botão enviar -->
+        <button class="submit-btn" type="submit">Enviar Formulário</button>
+
+        <!-- Link voltar -->
+        <a class="back-link" href="file:///C:/Users/Dell/Documents/IFSUL/WEB%20PROFESSOR%20LEONARDO/Trabalho%20final%20cpw/index.html">⟵ Voltar ao início</a>
+    </form>
+</div>
+
+<script>
+document.getElementById("adocaoForm").addEventListener("submit", function(event) {
+    let valid = true;
+
+    const nome = document.getElementById("nome").value.trim();
+    if (!nome.includes(" ") || nome.split(" ").length < 2) {
+        document.getElementById("erroNome").textContent = "Digite nome e sobrenome.";
+        valid = false;
+    } else { document.getElementById("erroNome").textContent = ""; }
+
+    const email = document.getElementById("email").value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("erroEmail").textContent = "E-mail inválido.";
+        valid = false;
+    } else { document.getElementById("erroEmail").textContent = ""; }
+
+    const telefone = document.getElementById("telefone").value;
+    const telRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+    if (!telRegex.test(telefone)) {
+        document.getElementById("erroTel").textContent = "Telefone inválido. Ex: (11) 98765-4321";
+        valid = false;
+    } else { document.getElementById("erroTel").textContent = ""; }
+
+    if (!valid) event.preventDefault();
+});
+</script>
+</body>
+</html>

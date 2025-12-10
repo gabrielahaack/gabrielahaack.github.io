@@ -51,6 +51,5 @@ PROJETO_WEB/
 ## ▶️ Executar localmente
 
 ```bash
-git clone https://github.com/SEU-USUARIO/PROJETO_WEB.git
+git clone https://github.com/gabrielahaack/PROJETO_WEB.git
 cd PROJETO_WEB
-# Abra index.html no navegador
